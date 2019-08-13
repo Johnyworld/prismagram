@@ -1,0 +1,7 @@
+type Mutation {
+    addComment(postId: String!, text:String!): Comment!
+}
+
+type Query {
+    something: String!
+}
