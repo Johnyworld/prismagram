@@ -2,6 +2,7 @@ type FullPost {
   post: Post!
   comments: [Comment!]!
   likeCount: Int!
+  likes: [Like!]!
 }
 
 type Query {

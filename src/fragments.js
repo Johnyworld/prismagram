@@ -7,3 +7,16 @@ export const COMMENT_FRAGMENT = `
         }
     }
 `
+
+export const LIKES_FRAGMENT = `
+    fragment LikeParts on Like {
+        id
+        post {
+            location
+            caption
+        }
+        user {
+            id
+        }
+    }
+`
