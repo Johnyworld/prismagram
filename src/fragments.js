@@ -20,11 +20,25 @@ export const LIKES_FRAGMENT = `
 export const USER_FRAGMENT = `
     id
     username
+    avatar
+    firstName
+    lastName
 `
 
 export const FILE_FRAGMENT = `
     id
     url
+`
+
+export const MESSAGES_FRAGMENT = `
+    id
+    text
+    from {
+        ${USER_FRAGMENT}
+    }
+    to {
+        ${USER_FRAGMENT}
+    }
 `
 
 export const FULL_POST_FRAGMENT = `
@@ -51,7 +65,10 @@ export const ROOM_FRAGMENT = `
     fragment RoomParts on Room {
         id
         participants {
-            id
+            ${USER_FRAGMENT}
+        }
+        messages {
+            ${MESSAGES_FRAGMENT}
         }
     }
 `
