@@ -15,6 +15,8 @@ type User {
   likes: [Like!]!
   comments: [Comment!]!
   rooms: [Room!]!
+  followingCount: Int!
+  followersCount: Int!
 }
 
 type Post {
