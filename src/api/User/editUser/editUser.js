@@ -8,7 +8,7 @@ export default {
             const { user } = request;
             return prisma.updateUser({ 
                 where:{ id: user.id }, 
-                data:{ username, emain, firstname, lastname, bio, avatar }
+                data:{ username, email, firstname, lastname, bio, avatar }
             })
         }
     }
