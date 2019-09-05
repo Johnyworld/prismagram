@@ -12,6 +12,7 @@ type User {
   followers: [User!]!
   following: [User!]!
   posts: [Post!]!
+  postsCount: Int!
   likes: [Like!]!
   comments: [Comment!]!
   rooms: [Room!]!
@@ -28,6 +29,7 @@ type Post {
   likes: [Like!]!
   likeCount: Int!
   comments: [Comment!]!
+  commentCount: Int!
   isLiked: Boolean!
   createdAt: String!
   updatedAt: String!
